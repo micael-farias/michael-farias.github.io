@@ -2,7 +2,7 @@
 title: Pedro Santana - Software Engineer
 description: Pedro Santana's personal portfolio
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
-# url: "pedrosantana.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "pedrosantana.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Pedro Santana
