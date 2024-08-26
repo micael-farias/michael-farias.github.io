@@ -70,7 +70,7 @@
 .project-link {
   display: inline-block;
   margin: 10px 0px;
-  padding: 5px;
+  padding: 10px;
   color: $main;
   background-color: transparent;
   border: 1px solid $main;
@@ -97,5 +97,39 @@
     transition: color 0.3s ease-in,
                 background-color 0.3s ease-in,
                 border-color 0.3s ease-in;
+  }
+}
+
+.saldo-positivo-images {
+  max-width: 300px; /* Ajuste este valor conforme necessário */
+  margin: 0 auto;
+}
+
+.saldo-positivo-images img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: $cut) {
+  .saldo-positivo-images {
+    max-width: 100%;
+  }
+}
+
+.museu-website-images {
+  max-width: 450px; /* Ajuste este valor conforme necessário */
+  margin: 0 auto;
+}
+
+.museu-website-images img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: $cut) {
+  .museu-website-images {
+    max-width: 100%;
   }
 }

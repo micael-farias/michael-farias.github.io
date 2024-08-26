@@ -1,17 +1,17 @@
 # Site settings
-title: Pedro Santana - Software Engineer
+title: Pedro Santana's Portfolio
 description: Pedro Santana's personal portfolio
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 url: "pedrosantana.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Pedro Santana
-user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+user_description: I am Pedro Emanuel Santana, 21 years old, a developer studying Software Engineering at UFC in Quixadá. I have experience in competitive programming and mentoring in key courses. I am enthusiastic about C, C++, Java, Python, and JavaScript, and always open to new technologies. I have collaborated on innovative projects, such as using low-cost microcontrollers for teaching physics in schools in underprivileged areas of Pernambuco. I was a finalist in the Brazilian Informatics Olympiad and other competitions. I am seeking challenging opportunities to apply and expand my knowledge in software development.
 user_title: Software Engineer Student
 email: pedroems.147@gmail.com
-# twitter_username: lorem_ipsum
 github_username:  Pedro-Emanuel
-# gplus_username:  lorem_ipsum
+twitter_username: _null
+gplus_username:  _null
 
 # Google-analytics
 google-analytics:
