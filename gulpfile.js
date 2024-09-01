@@ -56,19 +56,36 @@ function images() {
         .pipe(gulp.dest('assets/img/'));
 }
 
+// Old scripts task
+// function scripts() {
+//     return gulp.src('src/js/**/*.js')
+//         .pipe(plumber())
+//         .pipe(concat('main.js'))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('assets/js/'));
+// }
+
 // Compile and minify js
 function scripts() {
-    return gulp.src('src/js/**/*.js')
+    return gulp.src(['src/js/**/*.js', '!src/js/custom.js']) // Exclui custom.js do processo principal
         .pipe(plumber())
         .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('assets/js/'));
+        .pipe(gulp.dest('assets/js/'))
+        .pipe(browserSync.stream()) // Adiciona streaming para o BrowserSync
+        .on('end', function() { // Depois que main.js é criado, adiciona custom.js
+            return gulp.src(['assets/js/main.js', 'src/js/custom.js'])
+                .pipe(concat('main.js'))
+                .pipe(gulp.dest('assets/js/'))
+                .pipe(browserSync.stream());
+        });
 }
 
 // Watch files
 function watchFiles() {
     gulp.watch('src/styles/**/*.scss', gulp.series(styles, jekyllRebuild));
-    gulp.watch('src/js/**/*.js', gulp.series(scripts, jekyllRebuild));
+    // gulp.watch('src/js/**/*.js', gulp.series(scripts, jekyllRebuild));
+    gulp.watch(['src/js/**/*.js', 'src/js/custom.js'], gulp.series(scripts, jekyllRebuild));
     gulp.watch('src/fonts/**/*.{ttf,woff,woff2}', fonts);
     gulp.watch('src/img/**/*.{jpg,png,gif}', images);
     gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], jekyllRebuild);
