@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navigator.clipboard.writeText(emailAddress).then(function() {
             // Criação de um elemento de notificação
             var notification = document.createElement('div');
-            notification.textContent = 'E-mail copiado para a área de transferência!';
+            notification.textContent = 'E-mail copied to clipboard!';
             notification.style.position = 'fixed';
             notification.style.bottom = '20px';
             notification.style.left = '50%';
