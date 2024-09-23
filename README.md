@@ -1,4 +1,4 @@
-# Pedro Santana's personal portfolio
+# Michael Farias personal portfolio
 
 This theme was partially designed with the inspiration from these fine folks
 
